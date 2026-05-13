@@ -1,13 +1,221 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KleenNet</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KleenNet — Live Waste Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">KLEENNET</div>
+  <ul class="nav-links">
+    <li><a href="#problem">PROBLEM</a></li>
+    <li><a href="#solution">SOLUTION</a></li>
+    <li><a href="#vision">VISION</a></li>
+    <li><a href="#team">TEAM</a></li>
+    <li><a href="/dashboard.html">DASHBOARD</a></li>
+    <li><a href="/roadmap.html">ROADMAP</a></li>
+    <li><a href="/layer-breakdown.html">LAYERS</a></li>
+  </ul>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    SYSTEM LIVE
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-tag">// WASTE INTELLIGENCE NETWORK — INDIA</div>
+  <h1 class="hero-title">Every city is<br>sitting on a crisis<br>it cannot <span>see.</span></h1>
+  <p class="hero-sub">KleenNet is the intelligence layer that makes India's waste infrastructure visible, measurable, and safe — in real time.</p>
+  <div class="hero-cta">
+    <a href="#solution" class="btn-primary">SEE THE SOLUTION</a>
+    <a href="#vision" class="btn-ghost">OUR VISION</a>
+  </div>
+
+  <div class="hero-map">
+    <div class="map-frame">
+      <div class="city-grid" id="cityGrid">
+        <div class="map-scanline"></div>
+        <!-- city blocks -->
+        <div class="city-block" style="left:5%;top:10%;width:18%;height:22%;"></div>
+        <div class="city-block" style="left:28%;top:5%;width:22%;height:18%;"></div>
+        <div class="city-block" style="left:55%;top:12%;width:20%;height:20%;"></div>
+        <div class="city-block" style="left:8%;top:55%;width:16%;height:25%;"></div>
+        <div class="city-block" style="left:32%;top:60%;width:28%;height:22%;"></div>
+        <div class="city-block" style="left:68%;top:50%;width:18%;height:30%;"></div>
+        <!-- nodes -->
+        <div class="node red" style="left:14%;top:22%;" id="n1">
+          <div class="node-ring"></div>
+          <span id="n1v">87%</span>
+        </div>
+        <div class="node yellow" style="left:38%;top:14%;" id="n2">
+          <div class="node-ring"></div>
+          <span id="n2v">61%</span>
+        </div>
+        <div class="node green" style="left:65%;top:22%;" id="n3">
+          <div class="node-ring"></div>
+          <span id="n3v">28%</span>
+        </div>
+        <div class="node red" style="left:50%;top:48%;" id="n4">
+          <div class="node-ring"></div>
+          <span id="n4v">92%</span>
+        </div>
+        <div class="node green" style="left:16%;top:67%;" id="n5">
+          <div class="node-ring"></div>
+          <span id="n5v">19%</span>
+        </div>
+        <div class="node yellow" style="left:46%;top:75%;" id="n6">
+          <div class="node-ring"></div>
+          <span id="n6v">54%</span>
+        </div>
+        <div class="node green" style="left:77%;top:60%;" id="n7">
+          <div class="node-ring"></div>
+          <span id="n7v">33%</span>
+        </div>
+        <div class="node yellow" style="left:82%;top:30%;" id="n8">
+          <div class="node-ring"></div>
+          <span id="n8v">48%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="problem-layout">
+    <div class="problem-text reveal">
+      <div class="section-tag"><span>01</span> — THE CRISIS</div>
+      <h2 class="section-title">The system fails<br>in the dark.</h2>
+      <p>In India, <strong>300 sewer workers die every year.</strong> Not in accidents. Not in disasters. Just — going to work.</p>
+      <p>Five million people keep Indian cities running. And not a single city has real-time data on where its waste is, which manholes are blocked, or which areas are hours away from flooding.</p>
+      <p>The system doesn't fail because nobody cares. <strong>It fails because the information doesn't exist.</strong></p>
+    </div>
+    <div class="stat-grid reveal">
+      <div class="stat-card s-red">
+        <div class="stat-num" data-target="300">0</div>
+        <div class="stat-label">sewer worker deaths per year — just going to work</div>
+      </div>
+      <div class="stat-card s-blue">
+        <div class="stat-num" data-target="5" data-suffix="M">0</div>
+        <div class="stat-label">manual scavengers in India with no safety net</div>
+      </div>
+      <div class="stat-card s-yellow">
+        <div class="stat-num" data-target="0" data-prefix="₹">₹0</div>
+        <div class="stat-label">real-time waste data available to any Indian city</div>
+      </div>
+      <div class="stat-card s-green">
+        <div class="stat-num" data-target="40" data-suffix="yrs">0</div>
+        <div class="stat-label">this problem has existed without a technology solution</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section id="solution">
+  <div class="solution-center">
+    <div class="solution-intro reveal">
+      <div>
+        <div class="section-tag"><span style="color:var(--green)">02</span> — WHAT WE BUILT</div>
+        <h2 class="section-title">The intelligence<br>layer.</h2>
+      </div>
+      <p>Not a government app. Not a CSR campaigns.. A real technology company that makes the invisible visible — and then solvable. Three layers. Each one standalone. Together, they're a system.</p>
+    </div>
+    <div class="layers reveal">
+      <div class="layer-card">
+        <div class="layer-num">LAYER 01</div>
+        <span class="layer-icon">🤖</span>
+        <div class="layer-title">Sewer Robot</div>
+        <div class="layer-desc">Small. Waterproof. Built for India's narrow sewer geometry. Maps blockages, cracks, and gas levels before any human goes in. ₹50,000 per unit — not fifty lakh.</div>
+        <div class="layer-accent"></div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-num">LAYER 02</div>
+        <span class="layer-icon">📡</span>
+        <div class="layer-title">Waste Intelligence Network</div>
+        <div class="layer-desc">IoT sensors at every canal, manhole, and high-risk zone. Real-time accumulation data. A live heat map of a city's actual waste reality — something that has never existed.</div>
+        <div class="layer-accent"></div>
+      </div>
+      <div class="layer-card">
+        <div class="layer-num">LAYER 03</div>
+        <span class="layer-icon">🦺</span>
+        <div class="layer-title">Worker Safety Layer</div>
+        <div class="layer-desc">Gas detection wearable. Emergency SOS. A digital work identity — so five million invisible workers can finally access credit, insurance, and schemes they're entitled to.</div>
+        <div class="layer-accent"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section id="vision">
+  <div class="vision-center">
+    <div class="section-tag reveal" style="text-align:center; margin-bottom:48px;"><span style="color:var(--blue)">03</span> — THE VISION</div>
+    <div class="vision-quote reveal">
+      The technology to end this <em>exists.</em><br>
+      It just hasn't been pointed<br>at this problem yet.<br>
+      <em>We're pointing it.</em>
+    </div>
+    <div class="vision-items reveal">
+      <div class="vision-item">
+        <div class="vision-item-label">REVENUE 01</div>
+        <div class="vision-item-text">Robot as a service to municipalities — ₹15,000/month per robot vs ₹8,000/month risking a worker's life.</div>
+      </div>
+      <div class="vision-item">
+        <div class="vision-item-label">REVENUE 02</div>
+        <div class="vision-item-text">Sensor data licensed to urban planners, NGOs, and climate researchers building India's infrastructure future.</div>
+      </div>
+      <div class="vision-item">
+        <div class="vision-item-label">REVENUE 03</div>
+        <div class="vision-item-text">Safety wearables to contractors who carry legal liability — this is the cheapest insurance they'll ever buy.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="team-center">
+    <div class="team-header reveal">
+      <div>
+        <div class="section-tag"><span style="color:var(--blue)">04</span> — THE BUILDERS</div>
+        <h2 class="section-title">We built this.</h2>
+      </div>
+      <div class="team-tag">KADEEP AI</div>
+    </div>
+    <div class="team-cards">
+      <div class="team-card reveal">
+        <div class="team-id">// BUILDER_01</div>
+        <div class="team-name">Vedant</div>
+        <div class="team-role">CORE DEVELOPER</div>
+        <div class="team-desc">We grew up walking past this problem. We stopped walking.</div>
+        <span class="team-org">KADEEP AI</span>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-id">// BUILDER_02</div>
+        <div class="team-name">Janmejay</div>
+        <div class="team-role">CORE DEVELOPER</div>
+        <div class="team-desc">The information didn't exist. So we built the system to create it.</div>
+        <span class="team-org">KADEEP AI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">KLEENNET</div>
+  <div class="footer-text">BUILT BY KADEEP AI — VIBE CON 2025</div>
+  <div class="footer-text" id="footerTime"></div>
+</footer>
+<script type="module" src="/src/main.ts"></script>
+</body>
 </html>
